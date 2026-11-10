@@ -1,1 +1,85 @@
 @import "tailwindcss";
+
+@theme {
+  --color-sourmat-orange: #F28C18;
+  --color-sourmat-orange-dark: #D97A0F;
+  --color-sourmat-orange-light: #FFA940;
+  --color-sourmat-black: #171717;
+  --color-sourmat-gray: #F4F4F4;
+  --color-sourmat-gray-dark: #2D2D2D;
+  --font-family-vazir: 'Vazirmatn', sans-serif;
+}
+
+* {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+  text-align: right;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(242, 140, 24, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(242, 140, 24, 0.2);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #171717 0%, #2D2D2D 50%, #171717 100%);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #F28C18, #FFA940);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
